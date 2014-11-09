@@ -11,7 +11,7 @@ rm(data_full)
 datetime <- paste(as.Date(data$Date), data$Time)
 data$Datetime <- as.POSIXct(datetime)
 
-## Load Plot2 to file
+## Load Plot2 to graphic file
 plot(data$Global_active_power~data$Datetime, type="l",
 ylab="Global Active Power (kilowatts)", xlab="")
 dev.copy(png, file="plot2.png", height=480, width=480)
